@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap');
+
+*, body {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+:root {
+  --bg-blue: #408ef5;
+  --box-size: 60px;
+  --bg-blue-darker: #306ab8;
+  --bg-blue-border: #3678d1;
+  --red: #ff3d47;
+  --yellow: #ede737;
+}
+
+.grid-box {
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.grid-box-circle {
+  width: 90%;
+  height: 90%;
+  border-radius: 50px;
+  background-color: white;
+  transition: background-color .4s ease;
+  outline: 5px solid var(--bg-blue-border);
+}
+
+.grid-container {
+  margin-bottom: 0;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+}
+
+.grid {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: var(--bg-blue);
+  position: relative;
+  height: calc(var(--box-size) * 6);
+  display: grid;
+  grid-template-columns: repeat(7,var(--box-size));
+}
+
+.grid-column {
+  border-radius: 50px;
+  width: var(--box-size);
+  background-color: var(--bg-blue);
+  transition: background-color .2s ease-in
+
+}
+
+.grid-column-accessible:hover {
+  background-color: var(--bg-blue-darker)  ;
+}
+
+.grid-column-accessible:active {
+  filter: brightness(85%);
+}
+
+.message-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1.3rem;
+}
+
+.outline-text{
+  text-shadow: -0.5px -0.5px 0 darkyellow, 0.5px -0.5px 0 darkyellow, -0.5px 0.5px 0 darkyellow, 0.5px 0.5px 0 darkyellow;
+}
+
+.title-container {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 3.25rem;
+  margin-top: 50px;
+  margin-bottom: 0;
+  color: var(--bg-blue);
+  text-shadow: -1.3px -1.3px 0 var(--bg-blue-darker), 1.3px -1.3px 0 var(--bg-blue-darker), -1.3px 1.3px 0 var(--bg-blue-darker), 1.3px 1.3px 0 var(--bg-blue-darker);
+  text-decoration: none;
+  line-height: 0.7;
+  font-weight: 900;
+}
+
+button {
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: lightgrey;
+  border: 1px solid gray;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+button:hover {
+  filter: brightness(85%);
+}
+
+button:active {
+  filter: brightness(75%);
+}
+
+@media (max-width: 700px) {
+  .app {
+    zoom: 70%;
+    margin-top: 200px;
+  }
+}
